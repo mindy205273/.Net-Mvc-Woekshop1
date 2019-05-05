@@ -8,8 +8,15 @@ namespace MVC_Workshop.Controllers
 {
     public class SearchController : Controller
     {
-        // GET: Default
+        
+
         public ActionResult SearchIndex()
+        {
+            return View();
+        }
+
+        [HttpPost()]
+        public ActionResult SearchIndex(FormCollection form)
         {
             return View();
         }

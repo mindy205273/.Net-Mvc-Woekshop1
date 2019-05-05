@@ -5,41 +5,48 @@
 
 <h2>訂單資料維護</h2>
 
-<table>
-    <tr>
-        <td>書名</td>
-        <td><input type="text" /></td>
-    </tr>
-    <tr>
-        <td>圖書類別</td>
-        <td>
-            <select>
-                <option>選項1</option>
-                <option>選項2</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>借閱人</td>
-        <td>
-            <select>
-                <option>選項1</option>
-                <option>選項2</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>借閱狀態</td>
-        <td>
-            <select>
-                <option>選項1</option>蠻
-                <option>選項2</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="submit" value="查詢" /><input type="reset" value="刪除" /><input type="submit" value="新增" /></td>
-    </tr>
-</table>
+@using (Html.BeginForm("SearchIndex", "Search"))
+{
+    <table>
+        <tr>
+            <td>書名</td>
+            <td><input type="text" id="BOOK_NAME" name="BOOK_NAME"/></td>
+        </tr>
+        <tr>
+            <td>圖書類別</td>
+            <td>
+                <select name="BOOK_CALASS">
+                    <option>選項1</option>
+                    <option>選項2</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>借閱人</td>
+            <td>
+                <select name="MEMBER">
+                    <option>選項1</option>
+                    <option>選項2</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>借閱狀態</td>
+            <td>
+                <select name="BOOK_STATUS">
+                    <option>選項1</option>
+                    <option>選項2</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="查詢" /><input type="reset" value="刪除" /><input type="submit" value="新增" /></td>
+        </tr>
+    </table>
+
+}
+
+
+
 
